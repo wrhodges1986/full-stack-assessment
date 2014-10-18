@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<title>Full Stack Review</title>
+	<link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body ng-controller="myCtrl">
+	<div>
+		<h3>Family Members</h3>
+		<button ng-click="getFamilyMembers()">Get Family Members</button>
+		<ul ng-repeat="member in familyMembers">
+			<li>Name: {{member.name}} Age: {{member.age}} Relation: {{member.relation}}</li>
+		</ul>
+		<h5>Add a Family Member</h5>
+		<p>Name, Age, Relation: </p>
+		<input type="text" ng-model="newMember"/>
+		<button ng-click="addFamilyMember()">Add Member</button>
+
+		<h3>Friends</h3>
+		<button ng-click="getFriends()">Get Friends</button>
+		<ul ng-repeat="friend in friends">
+			<li>Name: {{friend.name}} Age: {{friend.age}} Met In: {{friend.met}}</li>
+		</ul>
+		<h5>Add a Friend</h5>
+		<p>Name, Age, Met In: </p>
+		<input type="text" ng-model="newFriend"/>
+		<button ng-click="addFriend()">Add Friend</button>
+
+		<h3>Activities</h3>
+		<button ng-click="getActivities()">Get Activities</button>
+		<ul ng-repeat="activity in activities">
+			<li>Name: {{activity.name}}</li>
+		</ul>
+		<h5>Add an Activity</h5>
+		<p>Name of activity: </p>
+		<input type="text" ng-model="newActivity"/>
+		<button ng-click="addActivity()">Add Activity</button>
+
+		<h3>Personal Information</h3>
+		<button ng-click="getPersonalInformation()">Get Personal Information</button>
+		<ul ng-repeat="item in personalInfo">
+			<li>Name: {{item.name}}</li>
+			<li>Height: {{item.height}}</li>
+			<li>Age: {{item.age}}</li>
+			<li>Favorite Movie: {{item.favoriteMovie}}</li>
+			<li>Favorite Artist: {{item.favoriteArtist}}</li>
+			<li>Favorite Food: {{item.favoriteFood}}</li>
+		</ul>
+	</div>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular-route.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/myCtrl.js"></script>
+    <script src="js/myService.js"></script>
+</body>
+
+</html>
