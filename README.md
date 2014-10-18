@@ -11,7 +11,7 @@ What we want to accomplish in this assessment is making a POST request from the 
 
 To do this, all you have to do is:
 * Create an form that has 3 input fields. Name, age, yearmet (remember to use ng-model).
-* Create am addFriends method in the controller that takes the information from the input fields and passes them to the service as an object.
+* Create an addFriends method in the controller that takes the information from the input fields and passes them to the service as an object.
 * Create an addFriends method in the service that takes the new friend object and passes it into the server with a $http request. Similar to the get requests but we need to pass in METHOD, URL, and DATA. That data should be the data object. 
 
 
